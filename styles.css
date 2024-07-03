@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0px;
+}
+
+nav {
+  background-color: #f8f8f8;
+  padding: 10px;
+}
+
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+/* Posts Page */
+#posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.post {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+}
+
+/* Audio Page */
+.audio-controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.audio-controls button {
+  display: flex;
+  align-items: center;
+}
+
+.audio-controls .icon {
+  margin-right: 10px;
+  height: 15px;
+  width: 15px;
+}

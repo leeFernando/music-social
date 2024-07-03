@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BandLab Frontend Test - Audio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav class="container">
+    <a href="index.html">Posts</a>
+    <a href="audio.html">Audio</a>
+  </nav>
+  <div class="container">
+    <h1>Audio Samples</h1>
+    <div class="audio-controls">
+      <button id="newWaveButton" onclick="toggleAudio('newWave')">
+        <span class="icon">▶</span> New Wave Kit
+      </button>
+      <button id="synthOrganButton" onclick="toggleAudio('synthOrgan')">
+        <span class="icon">▶</span> Synth Organ
+      </button>
+    </div>
+
+    <audio id="newWave" src="assets/new-wave-kit.ogg"></audio>
+    <audio id="synthOrgan" src="assets/synth-organ.ogg"></audio>
+  </div>
+  <script src="audio.js"></script>
+</body>
+
+</html>
