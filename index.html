@@ -16,8 +16,10 @@
   <div class="container">
     <h1>Posts List</h1>
     <div>
-      <button onclick="sortPosts()">Sort by Title</button>
-      <button onclick="groupPosts()">Group by User ID</button>
+      <button id="sortButton" onclick="sortPosts()">
+        Sort by Title <span id="sortIcon"></span>
+      </button>
+      <button id="groupButton" onclick="groupPosts()">Group by User ID</button>
     </div>
     <div id="posts"></div>
   </div>

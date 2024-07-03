@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', fetchPosts);
 
 let posts = [];
+let isAscending = true;
+let lastButtonClicked = null;
 
 function fetchPosts() {
     fetch('https://jsonplaceholder.typicode.com/posts')
@@ -23,8 +25,16 @@ function displayPosts(posts) {
 }
 
 function sortPosts() {
-    posts.sort((a, b) => a.title.localeCompare(b.title));
+    if (isAscending) {
+        posts.sort((a, b) => a.title.localeCompare(b.title));
+        document.getElementById('sortIcon').textContent = '↑';
+    } else {
+        posts.sort((a, b) => b.title.localeCompare(a.title));
+        document.getElementById('sortIcon').textContent = '↓';
+    }
+    isAscending = !isAscending;
     displayPosts(posts);
+    setActiveButton('sortButton');
 }
 
 function groupPosts() {
@@ -40,4 +50,13 @@ function groupPosts() {
     }
 
     displayPosts(groupedPostsArray);
+    setActiveButton('groupButton');
+}
+
+function setActiveButton(buttonId) {
+    if (lastButtonClicked) {
+        document.getElementById(lastButtonClicked).classList.remove('active');
+    }
+    document.getElementById(buttonId).classList.add('active');
+    lastButtonClicked = buttonId;
 }
