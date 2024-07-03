@@ -15,9 +15,13 @@
   </nav>
   <div class="container">
     <h1>Posts List</h1>
-    <div>
+    <div class="filter-container">
       <button onclick="sortPosts()">Sort by Title</button>
       <button onclick="groupPosts()">Group by User ID</button>
+      <div>
+        <input type="text" id="userIdInput" onfocus="showUserIdSuggestions()" oninput="searchUserIdSuggestion()">
+        <div id="userIdSuggestions" class="autocomplete-suggestions"></div>
+      </div>
     </div>
     <div id="posts"></div>
   </div>

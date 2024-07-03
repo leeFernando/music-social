@@ -19,7 +19,6 @@ nav a:hover {
 }
 
 button {
-  margin: 5px;
   padding: 10px;
   cursor: pointer;
 }
@@ -28,6 +27,13 @@ button {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  gap: 10px;
 }
 
 /* Posts Page */
@@ -51,10 +57,42 @@ button {
 .audio-controls button {
   display: flex;
   align-items: center;
+  margin: 5px;
 }
 
 .audio-controls .icon {
   margin-right: 10px;
   height: 15px;
   width: 15px;
+}
+
+/* Autocomplete field */
+.autocomplete-suggestions {
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  position: absolute;
+  background-color: white;
+  z-index: 1000;
+  width: 120px;
+  display: none;
+}
+
+.autocomplete-suggestions div {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.autocomplete-suggestions div:hover {
+  background-color: #f0f0f0;
+}
+
+.autocomplete-suggestions .selected {
+  background-color: #e0e0e0;
+}
+
+#userIdInput {
+  width: 120px;
+  padding: 10px 5px;
+  box-sizing: border-box;
 }
